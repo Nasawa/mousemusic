@@ -30,7 +30,7 @@ public class MouseMusic extends SuperMusic
 			newp = MouseInfo.getPointerInfo().getLocation();
 			if(oldp.x != newp.x || oldp.y != newp.y)
 			{
-				synth.setProgram(newp.y);
+				synth.setProgram(newp.y % 128);
 				synth.play(new Note(newp.x % 128, 50));
 			}
 			oldp = newp;
